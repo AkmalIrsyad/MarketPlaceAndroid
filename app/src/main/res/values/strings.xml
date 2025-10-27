@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">MarketPlace</string>
-    <string name="hello">Hello Akmal Selamat Datang, ini akmal irsyad dwi yulianto!</string>
+    <string name="hello">Hello Akmal</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
