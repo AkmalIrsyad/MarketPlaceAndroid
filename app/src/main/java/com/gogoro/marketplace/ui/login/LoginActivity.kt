@@ -9,8 +9,11 @@ import androidx.core.view.WindowInsetsCompat
 import com.gogoro.marketplace.R
 import com.gogoro.marketplace.databinding.ActivityLoginBinding
 import com.gogoro.marketplace.util.Prefs
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginActivity : AppCompatActivity() {
+
+    private val viewModel : LoginViewModel by viewModel()
 
     private var _binding: ActivityLoginBinding? = null
     private val binding get() = _binding!!
@@ -22,6 +25,12 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+//        Prefs(this)
+
+        setData()
+        }
+
+    fun testing(){
         val s = Prefs(this)
         if (s.getIsLogin()){
             binding.tvStatus.text = "Sudah Login"
@@ -37,6 +46,15 @@ class LoginActivity : AppCompatActivity() {
         }
 
         Log.d("RESPOM","PESAN SINGKAT")
-//        Prefs(this)
+    }
+
+    fun setData(){
+        viewModel.text.observe(this,{
+            binding.edtEmail.setText(it)
+        })
+        binding.btnMasuk.setOnClickListener {
+            viewModel.ubahData()
+        }
         }
     }
+

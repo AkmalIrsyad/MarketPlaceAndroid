@@ -65,7 +65,7 @@ dependencies {
 
     // Koin
 //    implementation ("org.koin:koin-android:2.2.2")
-//    implementation ("org.koin:koin-androidx-viewmodel:2.2.2")
+    implementation ("org.koin:koin-androidx-viewmodel:2.2.2")
 //core
     implementation("io.insert-koin:koin-android:3.5.6")
 
